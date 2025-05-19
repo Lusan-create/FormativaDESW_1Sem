@@ -1,4 +1,7 @@
-
+/*------------------------------------------------- Geral -------------------------------------------------*/
+ h1, h2, h3, h4{
+    color: blue;
+ }
 
 
 /*----------------------------------------------- HEADER -------------------------------------------------*/
@@ -96,21 +99,25 @@ header p {
 
 .art01{
     /*Config Grid*/
+    display: grid;
     grid-template-areas: 
     'texto img';
-    display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows:    1fr;
 
     /*Config Posicionamento*/
-    padding-left:          5dvw;
-    padding-right:         5dvw;
-    margin-top:            3dvh;
+    margin-left:          2dvw;
+    margin-right:         2dvw;
+    margin-top:           3dvh;
+
+    /*Config Tamanho*/
 }
 
-.art01_section{
+.art01_section{ 
     grid-area:             texto;
     justify-self:          center;
+    align-self:            center;
+    height: 45dvh;
 
 }
 
@@ -120,7 +127,7 @@ header p {
 }
 
 .art01_h1{
-    color:               blue;
+    color:               black;
     font-size:             2.5dvw;
     justify-self:          left;
     align-self:            bottom;
@@ -141,20 +148,130 @@ header p {
 /*-------------------------- Segundo Article -------------------------------*/
 
 .art02{
+    display: grid;
     grid-template-rows:      1fr;
     grid-template-columns:   repeat(3, 1fr);
     grid-template-areas:    
-    'inova equipe suporte';
+    "inova equipe suporte";
+
+
+    margin-top:     4dvh;
+    margin-left:    2dvw;
+    margin-right:   2dvw;
+    column-gap:     3dvh;
 }
 
 .art02_inova{
     grid-area: inova;
+    padding: 2dvh;
+    display: grid;
+    grid-template-columns: 1fr, 5fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: "img texto01"
+                        "img texto";
 }
 
 .art02_equipe{
     grid-area: equipe;
+    padding: 2dvh;
+    display: grid;
+    grid-template-columns: 1fr, 5fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: "img texto01"
+                        "img texto";
 }
 
 .art02_suporte{
     grid-area: suporte;
+    padding: 2dvh;
+    display: grid;
+    grid-template-columns: 1fr, 5fr;
+    grid-template-rows: 1fr, 1fr;
+    grid-template-areas: "img texto01"
+                        "img texto";
 }
+
+#art02_texto{
+    grid-area: texto;
+}
+
+#art02_texto01{
+    grid-area: texto01;
+}
+
+#art02_img{
+    grid-area: img;
+}
+
+.art02 h1{
+    color:blue;
+}
+
+.art02 p {
+    font-size: 1dvw;
+}
+
+.art02 section{
+    background-color: silver;
+    padding-right:      1dvw;
+    padding-left:       1dvw;
+    align-content:      center;
+}
+
+ /*------------------------- Terceiro article -------------------------*/
+
+ .art03{
+    display:                    grid;
+    grid-template-columns:      1fr, 1fr;
+    grid-template-rows:         1fr, 1fr;
+
+    grid-template-areas:        'texto imagem'
+                                'texto imagem';
+
+    justify-items: center;
+
+ }
+
+ .art03_texto{
+    grid-area: texto;
+
+ }
+
+ .art03_img{
+    grid-area:          imagem;
+
+ }
+ #art03_img{
+    align-self: center;
+    height:     80%;
+    width:      80%;
+ }
+
+ .art03_texto h1, h2{
+    color: black;
+ }
+
+ /*------------------------------------ Quarto Article -----------------------------------------*/
+
+ .art04{
+    display: grid;
+    grid-template-columns:  1fr, 1fr;
+    grid-template-rows:     1fr, 1fr;
+    grid-template-areas:    "img texto"
+                            "img texto";
+    
+    justify-items: center;
+ }
+
+ .art04_img{
+    grid-area: img;
+    background-color: yellow;
+    width: 50%;
+
+ }
+
+ .art04_texto{
+    grid-area: texto;
+    width: 50%;
+ }
+
