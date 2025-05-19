@@ -1,0 +1,160 @@
+
+
+
+/*----------------------------------------------- HEADER -------------------------------------------------*/
+.header{
+    /*Config Grid*/
+    display: grid;
+    grid-template-rows:    repeat(4, 1fr);
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+    'nav'
+    'h1'
+    'frase'
+    'botao';
+    
+    /*Config Estilo*/
+    background-image:  url(../formativaDESW/img/b1.jpg);
+    background-repeat: no-repeat;
+    background-size:   cover;
+    border:            0%;
+    margin:            0%;
+
+    /*Config de posicionamento*/
+    justify-items:    center;
+    align-items:      center;
+    column-gap:       10%;
+
+    /*Config tamanho*/
+    height:           70dvh;
+    width:            100%;
+}
+
+nav{
+    grid-area:        nav;
+    color:          white;
+    justify-self:     center;
+    align-self:       start;
+    margin-top:       0.5%;
+    width:            100%;
+    
+}
+nav a{
+    color:          white;
+    text-decoration:  none;
+}
+nav button{
+
+    background-color:blue;
+    color:          white;
+    border-color:   black;
+    box-shadow:       1dvw;
+}
+ 
+header h1{
+    grid-area:         h1;
+    color:           white;
+    font-size:         5dvw;
+    font-style:        italic;
+}
+
+header p {
+    color:           white;
+    font-size:         1.5dvw;
+    padding-left:      10dvw;
+    padding-right:     10dvw;
+}
+
+.header_button01{
+
+    width:             15dvw;
+    height:            5dvh;
+    border-radius:     1dvh;
+    box-shadow:        10dvw;
+}
+
+.header_button02{
+    background-color:  none;
+    width:             15dvw;
+    height:            5dvh;
+    border-radius:     1dvh;
+}
+
+.pPrincial{
+    grid-area:         frase;
+
+}
+
+.botaoPrincipal{
+    grid-area:         botao;
+}
+
+
+
+
+/*------------------------------------------Primeiro article----------------------------------*/
+
+.art01{
+    /*Config Grid*/
+    grid-template-areas: 
+    'texto img';
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows:    1fr;
+
+    /*Config Posicionamento*/
+    padding-left:          5dvw;
+    padding-right:         5dvw;
+    margin-top:            3dvh;
+}
+
+.art01_section{
+    grid-area:             texto;
+    justify-self:          center;
+
+}
+
+.art01_img{
+    grid-area:             img;
+
+}
+
+.art01_h1{
+    color:               blue;
+    font-size:             2.5dvw;
+    justify-self:          left;
+    align-self:            bottom;
+}
+
+.art01_p{
+    /*Config estilo*/
+    font-size:             1dvw;
+    color:               black;
+
+    /*Config posicionamento*/
+    justify-self:          center;
+    align-self:            center;
+    margin-right:          3dvw;
+
+}
+
+/*-------------------------- Segundo Article -------------------------------*/
+
+.art02{
+    grid-template-rows:      1fr;
+    grid-template-columns:   repeat(3, 1fr);
+    grid-template-areas:    
+    'inova equipe suporte';
+}
+
+.art02_inova{
+    grid-area: inova;
+}
+
+.art02_equipe{
+    grid-area: equipe;
+}
+
+.art02_suporte{
+    grid-area: suporte;
+}
