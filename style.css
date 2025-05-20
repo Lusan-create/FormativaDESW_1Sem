@@ -1,8 +1,12 @@
 /*------------------------------------------------- Geral -------------------------------------------------*/
- h1, h2, h3, h4{
-    color: blue;
- }
+main{
+    width: 100%;
+}
 
+header{
+    width: 100%;
+    background-color: blue;
+}
 
 /*----------------------------------------------- HEADER -------------------------------------------------*/
 .header{
@@ -17,41 +21,68 @@
     'botao';
     
     /*Config Estilo*/
-    background-image:  url(../formativaDESW/img/b1.jpg);
-    background-repeat: no-repeat;
-    background-size:   cover;
-    border:            0%;
-    margin:            0%;
+    background-image:   url(../formativaDESW/img/b1.jpg);
+    background-repeat:  no-repeat;
+    background-size:    cover;
+    border:             0%;
+    margin:             0%;
+    padding:            0%;
 
     /*Config de posicionamento*/
-    justify-items:    center;
-    align-items:      center;
-    column-gap:       10%;
+    column-gap:         10%;
+    justify-items:      center;
 
     /*Config tamanho*/
-    height:           70dvh;
-    width:            100%;
+    height:             100dvh;
+    width:              100%;
 }
 
 nav{
-    grid-area:        nav;
-    color:          white;
-    justify-self:     center;
-    align-self:       start;
-    margin-top:       0.5%;
-    width:            100%;
+    grid-area:              nav;
+    color:                white;
+    align-self:             start;
+    margin-top:             0.5dvh;
+    align-items:            center;
+
+    width: 100%;
+
+    display: grid;
+    grid-template-areas: 
+    "logo sobre servicos buton";
     
 }
 nav a{
+    /*Estilo*/
     color:          white;
     text-decoration:  none;
+    font-size: 150%;
+    /*Posicionamento*/
+
+
 }
 nav button{
+    /*Estilo*/
+    background-color:   blue;
+    color:              white;
+    border-color:       blue;
+    box-shadow:           1dvw;
 
-    background-color:blue;
-    color:          white;
-    border-color:   black;
-    box-shadow:       1dvw;
+    border-radius: 1dvw;
+
+    font-size: 125%;
+
+    /*Posicionamento*/
+    justify-self: right;
+    margin-right: 2dvw;
+
+    /*Tamanho*/
+    height: 5dvh;   
+    width: 10dvw;
+}
+
+nav img{
+    height:         12dvh;
+    margin-left:    2dvw;
 }
  
 header h1{
@@ -66,6 +97,9 @@ header p {
     font-size:         1.5dvw;
     padding-left:      10dvw;
     padding-right:     10dvw;
+    margin-right:      12dvw;
+    margin-left:       12dvw;
+    
 }
 
 .header_button01{
@@ -74,10 +108,16 @@ header p {
     height:            5dvh;
     border-radius:     1dvh;
     box-shadow:        10dvw;
+
+    background-color:  transparent;
+    border-color:    white;
+    color:           white;
 }
 
 .header_button02{
-    background-color:  none;
+    background-color:blue;
+    border-color:    blue;
+    color:           white;
     width:             15dvw;
     height:            5dvh;
     border-radius:     1dvh;
@@ -106,36 +146,43 @@ header p {
     grid-template-rows:    1fr;
 
     /*Config Posicionamento*/
-    margin-left:          2dvw;
-    margin-right:         2dvw;
+    margin-left:          4dvw;
+    margin-right:         0dvw;
     margin-top:           3dvh;
 
     /*Config Tamanho*/
 }
 
 .art01_section{ 
-    grid-area:             texto;
-    justify-self:          center;
-    align-self:            center;
-    height: 45dvh;
+    grid-area:              texto;
+    justify-self:           center;
+    align-content:          center;
+    height:                 45dvh;
+
 
 }
 
 .art01_img{
-    grid-area:             img;
+    grid-area:              img;
+    height:                 55dvh;
+    width:                  55dvw;
+    justify-self:           right;
+
+    border-radius:          1dvw;
+    margin-right:           1dvw
 
 }
 
 .art01_h1{
     color:               black;
-    font-size:             2.5dvw;
+    font-size:             250%;
     justify-self:          left;
     align-self:            bottom;
 }
 
 .art01_p{
     /*Config estilo*/
-    font-size:             1dvw;
+    font-size:             150%;
     color:               black;
 
     /*Config posicionamento*/
@@ -148,74 +195,87 @@ header p {
 /*-------------------------- Segundo Article -------------------------------*/
 
 .art02{
+    /*Config Grid*/
     display: grid;
-    grid-template-rows:      1fr;
-    grid-template-columns:   repeat(3, 1fr);
+    grid-template-rows:         1fr;
+    grid-template-columns:      repeat(3, 1fr);
     grid-template-areas:    
     "inova equipe suporte";
 
+    /*Congif Posicionamento*/
+    margin-top:                 4dvh;
+    margin-left:                2dvw;
+    margin-right:               2dvw;
+    column-gap:                 3dvh;
 
-    margin-top:     4dvh;
-    margin-left:    2dvw;
-    margin-right:   2dvw;
-    column-gap:     3dvh;
+    /*Config Estilo*/
+    background-color:           rgb(223, 220, 220);
+    border-radius:              1dvw;
 }
 
 .art02_inova{
-    grid-area: inova;
-    padding: 2dvh;
-    display: grid;
-    grid-template-columns: 1fr, 5fr;
-    grid-template-rows: 1fr, 1fr;
-    grid-template-areas: "img texto01"
-                        "img texto";
+    /*Config Grid*/
+    grid-area:                  inova;
+    padding:                    2dvh;
+    display:                    grid;
+    grid-template-columns:      1fr, 5fr;
+    grid-template-rows:         1fr, 1fr;
+    grid-template-areas:        "img texto01"
+                                "img texto";
+
+    row-gap: 0%;
 }
 
 .art02_equipe{
-    grid-area: equipe;
-    padding: 2dvh;
-    display: grid;
-    grid-template-columns: 1fr, 5fr;
-    grid-template-rows: 1fr, 1fr;
-    grid-template-areas: "img texto01"
-                        "img texto";
+    /*Config Grid*/
+    grid-area:                  equipe;
+    padding:                    2dvh;
+    display:                    grid;
+    grid-template-columns:      1fr, 5fr;
+    grid-template-rows:         1fr, 1fr;
+    grid-template-areas:        "img texto01"
+                                "img texto";
 }
 
 .art02_suporte{
-    grid-area: suporte;
-    padding: 2dvh;
-    display: grid;
-    grid-template-columns: 1fr, 5fr;
-    grid-template-rows: 1fr, 1fr;
-    grid-template-areas: "img texto01"
-                        "img texto";
+    /*Config grid*/
+    grid-area:                  suporte;
+    padding:                    2dvh;
+    display:                    grid;
+    grid-template-columns:      1fr, 5fr;
+    grid-template-rows:         1fr, 1fr;
+    grid-template-areas:        "img texto01"
+                                "img texto";
+    
 }
 
 #art02_texto{
-    grid-area: texto;
+    grid-area:                  texto;
 }
 
 #art02_texto01{
-    grid-area: texto01;
+    grid-area:                  texto01;
 }
 
 #art02_img{
-    grid-area: img;
+    grid-area:                   img;
+    height:                      10%;
+
+    align-self:                  center;
 }
 
 .art02 h1{
-    color:blue;
+    color:                      blue;
 }
 
 .art02 p {
-    font-size: 1dvw;
+    font-size:                   1dvw;
 }
 
 .art02 section{
-    background-color: silver;
-    padding-right:      1dvw;
-    padding-left:       1dvw;
-    align-content:      center;
+    padding-right:               1dvw;
+    padding-left:                1dvw;
+    align-content:               center;
 }
 
  /*------------------------- Terceiro article -------------------------*/
@@ -223,12 +283,14 @@ header p {
  .art03{
     display:                    grid;
     grid-template-columns:      1fr, 1fr;
-    grid-template-rows:         1fr, 1fr;
+    grid-template-rows:         1fr;
 
-    grid-template-areas:        'texto imagem'
-                                'texto imagem';
+    grid-template-areas:        'texto imagem';
 
-    justify-items: center;
+    justify-items:  none;
+    margin-left:    2dvw;
+    margin-right:   2dvw;
+    margin-top:     4dvh;
 
  }
 
