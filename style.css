@@ -1,4 +1,9 @@
 /*------------------------------------------------- Geral -------------------------------------------------*/
+@font-face {
+    font-family: 'montserrat';
+    src: url(fonts/Montserrat-Regular.ttf);
+}
+
 main{
     width: 100%;
 }
@@ -8,12 +13,16 @@ header{
     background-color: blue;
 }
 
+p{
+    font-family: "montserrat";
+}
+
 /*----------------------------------------------- HEADER -------------------------------------------------*/
 .header{
     /*Config Grid*/
-    display: grid;
-    grid-template-rows:    repeat(4, 1fr);
-    grid-template-columns: 1fr;
+    display:                grid;
+    grid-template-rows:     repeat(4, 1fr);
+    grid-template-columns:  1fr;
     grid-template-areas: 
     'nav'
     'h1'
@@ -21,12 +30,12 @@ header{
     'botao';
     
     /*Config Estilo*/
-    background-image:   url(../formativaDESW/img/b1.jpg);
+    background-image:   url(../formativaDESW/img/backgorund_img.jpg);
     background-repeat:  no-repeat;
-    background-size:    cover;
-    border:             0%;
-    margin:             0%;
-    padding:            0%;
+    background-size:    100% 100%;
+    border:             0;
+    margin:             0;
+    padding:            0;
 
     /*Config de posicionamento*/
     column-gap:         10%;
@@ -151,6 +160,7 @@ header p {
     margin-top:           3dvh;
 
     /*Config Tamanho*/
+    height: 55dvh;
 }
 
 .art01_section{ 
@@ -206,11 +216,16 @@ header p {
     margin-top:                 4dvh;
     margin-left:                2dvw;
     margin-right:               2dvw;
-    column-gap:                 3dvh;
+    column-gap:                 0dvh;
+    padding-left:               1dvw;
+    padding-right:              1dvw;
 
     /*Config Estilo*/
     background-color:           rgb(223, 220, 220);
     border-radius:              1dvw;
+
+    /*Config Tamanho*/
+    height: 30dvh;
 }
 
 .art02_inova{
@@ -222,19 +237,21 @@ header p {
     grid-template-rows:         1fr, 1fr;
     grid-template-areas:        "img texto01"
                                 "img texto";
-
-    row-gap: 0%;
+    
+    column-gap: 2dvw;
 }
 
 .art02_equipe{
     /*Config Grid*/
     grid-area:                  equipe;
-    padding:                    2dvh;
     display:                    grid;
+    padding:                    2dvh;
     grid-template-columns:      1fr, 5fr;
-    grid-template-rows:         1fr, 1fr;
+    grid-template-rows:         1fr, 1fr,;
     grid-template-areas:        "img texto01"
                                 "img texto";
+                            
+    column-gap: 2dvw;
 }
 
 .art02_suporte{
@@ -243,25 +260,35 @@ header p {
     padding:                    2dvh;
     display:                    grid;
     grid-template-columns:      1fr, 5fr;
-    grid-template-rows:         1fr, 1fr;
-    grid-template-areas:        "img texto01"
-                                "img texto";
-    
+    grid-template-rows:         1fr;
+    grid-template-areas:        "img texto";
+
+    column-gap: 2dvw;
+
 }
 
 #art02_texto{
     grid-area:                  texto;
 }
 
-#art02_texto01{
-    grid-area:                  texto01;
+#art02_texto p {
+    font-size: 100%;
+}
+
+#art02_h1{
+
+    font-size: 150%;
+
 }
 
 #art02_img{
     grid-area:                   img;
-    height:                      10%;
+    height:                      4dvw;
+    width:                       4dvw;
+    
 
     align-self:                  center;
+
 }
 
 .art02 h1{
